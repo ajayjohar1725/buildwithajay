@@ -1,0 +1,185 @@
+.life-page { padding-bottom: 7rem; }
+
+.life-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.life-section-alt { background: var(--paper-warm); }
+
+.life-section-head {
+  max-width: 580px;
+  margin-bottom: 3rem;
+}
+
+.life-section-head .label { margin-bottom: 0.75rem; }
+
+.life-section-head h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.life-section-head p {
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+/* Photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.photo-slot {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-warm);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-slot:hover { transform: scale(1.01); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+
+.photo-slot-tall { grid-row: span 2; }
+.photo-slot-wide { grid-column: span 2; }
+
+.photo-placeholder {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 2rem;
+  border: 2px dashed var(--line);
+  margin: 0.75rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: calc(100% - 1.5rem);
+}
+
+.photo-slot-tall .photo-placeholder { min-height: 360px; }
+
+.photo-placeholder-icon {
+  color: var(--ink-faint);
+}
+
+.photo-placeholder-text {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+
+.photo-caption {
+  padding: 0.6rem 0.85rem 0.85rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.photo-note {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.photo-note strong { color: var(--ink); }
+.photo-note code {
+  font-family: 'Courier New', monospace;
+  background: var(--paper-mid);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.82em;
+  color: var(--accent);
+}
+
+/* Cooking */
+.cooking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.cooking-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cooking-card:hover { border-color: var(--ink-faint); transform: translateY(-2px); }
+
+.cooking-emoji {
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cooking-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.cooking-story {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+}
+
+/* Life list */
+.life-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.life-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.life-item:first-child { border-top: 1px solid var(--line); }
+
+.life-item-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  padding-top: 2px;
+}
+
+.life-item p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .photo-grid { grid-template-columns: 1fr 1fr; }
+  .photo-slot-tall { grid-row: auto; }
+  .photo-slot-wide { grid-column: auto; }
+  .cooking-grid { grid-template-columns: 1fr; }
+  .life-item { grid-template-columns: 1fr; gap: 0.75rem; }
+}

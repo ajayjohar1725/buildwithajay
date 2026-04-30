@@ -1,0 +1,232 @@
+.work-page { padding-bottom: 7rem; }
+
+.work-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head {
+  margin-bottom: 3.5rem;
+}
+
+.section-head .label { margin-bottom: 0.75rem; }
+
+.section-head h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-top: 0.5rem;
+}
+
+/* Projects */
+.projects-list { display: flex; flex-direction: column; gap: 0; }
+
+.project-row {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.2s ease;
+}
+
+.project-row:last-child { border-bottom: none; }
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.project-num {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  margin-top: 4px;
+}
+
+.project-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.project-role {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.project-highlight {
+  padding: 0.4rem 1rem;
+  background: var(--accent-light);
+  border: 1px solid rgba(200,80,42,0.15);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  white-space: nowrap;
+  align-self: start;
+}
+
+.project-psr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.psr-col {}
+
+.psr-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.5rem;
+}
+
+.psr-col p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.psr-result p { color: var(--ink); font-weight: 500; }
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.stack-pill {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: var(--ink-muted);
+}
+
+/* Experience */
+.exp-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.exp-list { display: flex; flex-direction: column; gap: 0; }
+
+.exp-row {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.exp-row:last-child { border-bottom: none; }
+
+.exp-role {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.exp-company {
+  font-size: 0.88rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.exp-meta {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  line-height: 1.5;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.exp-bullets li {
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Education */
+.edu-section {
+  padding: 6rem 0;
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.edu-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.edu-degree {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.edu-date {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+}
+
+.edu-note {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .project-psr { grid-template-columns: 1fr; gap: 1.25rem; }
+  .exp-row { grid-template-columns: 1fr; gap: 1.25rem; }
+  .edu-grid { grid-template-columns: 1fr; }
+}

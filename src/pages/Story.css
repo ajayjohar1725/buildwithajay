@@ -1,0 +1,136 @@
+.story-page { padding-bottom: 7rem; }
+
+.page-header {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-warm);
+}
+
+.page-header h1 {
+  margin: 1rem 0 1.5rem;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.page-header-sub {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 500px;
+  line-height: 1.75;
+}
+
+.story-body {
+  padding-top: 5rem;
+}
+
+.chapter {
+  margin-bottom: 1rem;
+}
+
+.chapter-marker {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.chapter-num {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  font-weight: 300;
+}
+
+.chapter-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.chapter-date {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-left: auto;
+}
+
+.chapter h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  margin-bottom: 1.75rem;
+  line-height: 1.2;
+  max-width: 560px;
+}
+
+.chapter p {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.chapter p em { font-style: italic; color: var(--ink); }
+.chapter p strong { font-weight: 700; color: var(--ink); }
+
+.story-quote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--paper-warm);
+  border-radius: 0 8px 8px 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.story-quote-accent {
+  background: var(--accent-light);
+  border-left-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+.chapter-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 4rem 0;
+}
+
+.story-values {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.value-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.value-num {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.value-text {
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.value-text strong { color: var(--ink); font-weight: 700; }
